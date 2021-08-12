@@ -13,8 +13,7 @@ require('firebase/firestore');
 export default class Chat extends React.Component {
     constructor() {
         super();
-        const firebase = require('firebase');
-        require('firebase/firestore');
+
 
         const firebaseConfig = {
             apiKey: "AIzaSyDw-qJvzgcPfY-B_2ggxEi8noIFkyQqHRw",
@@ -23,9 +22,8 @@ export default class Chat extends React.Component {
             storageBucket: "hello-world-aa406.appspot.com",
             messagingSenderId: "1094062716223",
             appId: "1:1094062716223:web:af54ed16328a0d6af10f8a",
-            measurementId: "G-2J77HRY0SR"
-        };
-
+            measurementId: "G-2J77HRY0SR",
+        }
         if (!firebase.apps.length) {
             firebase.initializeApp(firebaseConfig);
         }
