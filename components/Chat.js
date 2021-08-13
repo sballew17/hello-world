@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Platform, KeyboardAvoidingView } from 'react-native';
+import { View, Text, Platform, KeyboardAvoidingView, StyleSheet } from 'react-native';
 import { GiftedChat, Bubble, SystemMessage, InputToolbar } from 'react-native-gifted-chat';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import NetInfo from '@react-native-community/netinfo';
@@ -235,3 +235,15 @@ export default class Chat extends React.Component {
         )
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        width: '100%',
+    },
+
+    chatArea: {
+        flex: 1,
+        width: '100%',
+    },
+});
