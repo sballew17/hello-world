@@ -120,11 +120,11 @@ export default class Chat extends React.Component {
         this.referenceChatMessages.add({
             uid: this.state.uid,
             _id: message._id,
-            createdAt: message.createdAt,
+            // createdAt: message.createdAt,
             text: message.text || null,
             user: message.user,
-            image: message.image || null,
-            location: message.location || null,
+            // image: message.image || null,
+            // location: message.location || null,
         });
     }
 
@@ -206,11 +206,14 @@ export default class Chat extends React.Component {
                 {...props}
                 wrapperStyle={{
                     right: {
-                        backgroundColor: '#000'
+                        backgroundColor: '#7777',
+                        color: '#FFF'
+                    },
+                    left: {
+                        backgroundColor: '#FFF',
                     }
-                }}
-            />
-        )
+                }} />
+        );
     }
 
     render() {
@@ -236,14 +239,3 @@ export default class Chat extends React.Component {
     }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        width: '100%',
-    },
-
-    chatArea: {
-        flex: 1,
-        width: '100%',
-    },
-});
