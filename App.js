@@ -10,11 +10,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React, { Componenet } from 'react';
 
 
+
 // Create the navigator
 const Stack = createStackNavigator();
 
 export default class App extends React.Component {
-
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <NavigationContainer>
